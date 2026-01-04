@@ -73,7 +73,7 @@ The SQLite database (`database.sqlite`) is created automatically on first run.
 - On successful login, a **JWT token** is returned
 - Protected routes require a header:
 <pre>
-  Authorization: Bearer <your_token>
+  Authorization: Bearer <your_token></your_token>
 </pre>
 
 The token contains the user's `id` and `email` and expires after a configurable duration.
