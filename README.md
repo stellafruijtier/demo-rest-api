@@ -98,6 +98,36 @@ The token contains the user's `id` and `email` and expires after a configurable 
 - Only image files are accepted
 - Uploaded images are served statically by the API
 
+## Database Structure
+The database consists of three tables:
+- `users`
+- `events`
+- `registrations`
+
+Key characteristics:
+- Foreign keys enabled
+- Cascading deletes
+- Unique constraints to prevent duplicate registrations
+
+## Summary of Insights
+- Clean separation of backend concerns improves maintainability
+- JWT authentication enables stateless, scalable APIs
+- SQLite is well-suited for local development and demos
+- Middleware simplifies cross-cutting concerns like auth and uploads
+- AI tools can significantly speed up heavy backend work
+
+## Key concepts reinforced
+- REST API design
+- Authentication & authorization
+- Secure password handling
+- File upload in Express
+- Relational database modeling
+- Modular backend architecture
+- AI-assisted development workflows
+
+## Acknowledgments
+This project was developed as part of the Udemy course **"AI for Developers with GitHub Copilot, Cursor AI, & ChatGPT"**, which emphasizes practical backend development while leveraging modern AI tools to enhance productivity and code quality.
+
 
 
 
