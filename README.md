@@ -67,6 +67,37 @@ The API will run at:
 
 The SQLite database (`database.sqlite`) is created automatically on first run.
 
+## Authentication Flow
+
+- Users sign up and log in via `/api/users`
+- On successful login, a **JWT token** is returned
+- Protected routes require a header:
+<pre>
+  Authorization: Bearer <your_token>
+</pre>
+
+The token contains the user's `id` and `email` and expires after a configurable duration.
+
+## Main API Endpoints
+
+### Users
+- `POST /api/users/signup` - Create a new user
+- `POST /api/users/login` - Log in and receive JWT
+
+### Events
+- `GET /api/events` - Get all events
+- `GET /api/events/:id` - Get event by ID
+- `POST /api/events` - Create event (authenticated, image required)
+- `PUT /api/events/:id` - Update an event (authenticated)
+- `DELETE /api/events/:id` - Delete event (authenticated)
+- `POST /api/events/:id/register` - Register for an event (authenticated)
+
+## Image Uploads
+- Images are uploaded using multipart/form-data
+- Stored in `public/images/`
+- Only image files are accepted
+- Uploaded images are served statically by the API
+
 
 
 
